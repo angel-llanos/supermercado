@@ -1,13 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>register</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/login"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>Regístrate en Supermonkey</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="container">
+    <ion-card>
+      <div class="div-titulo">
+        <ion-title>Registro</ion-title>
+      </div>
+
+      <br />
+      <br />
+
+      <ion-input label="Nombre" label-placement="floating" fill="outline" placeholder="Donjuan"></ion-input>
+      <br />
+      
+      <ion-input label="Apellido" label-placement="floating" fill="outline" placeholder="Donjuan"></ion-input>
+      <br />
+
+      <ion-input label="Nombre de usuario" label-placement="floating" fill="outline" placeholder="Donjuan"></ion-input>
+      <br />
+
+      <ion-input label="Correo electrónico" type="email" label-placement="floating" fill="outline" placeholder="Donjuan"></ion-input>
+      <br />
+
+      <ion-input label="Contraseña" type="password" label-placement="floating" fill="outline" placeholder="Contraseña"></ion-input>
+      <br />
+
+      <ion-input label="Confirmar Contraseña" type="password" label-placement="floating" fill="outline" placeholder="Contraseña"></ion-input>
+      <br />
+
+      <div class="container-check">
+        <ion-checkbox>Acepto los <a [routerLink]="['#']" (click)="$event.stopPropagation()">términos y condiciones</a></ion-checkbox>
+      </div>
+
+      <div class="container-boton">
+        <ion-button class="boton" color="success" [routerLink]="['/frutas']">Crear cuenta</ion-button>
+      </div>
+
+    </ion-card>
+  </div>
 </ion-content>

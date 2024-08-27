@@ -1,25 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
   <div id="container">
     <ion-card>
-      <div>
-        <ion-title >INICIO DE SESSION</ion-title>
-      </div>
+      <ion-item>
+        <ion-title>INICIO DE SESSION</ion-title>
+      </ion-item>
 
       <br />
-
       <br />
 
       <ion-input label="Usuario" label-placement="floating" fill="outline" placeholder="Donjuan"></ion-input>
-  
       <br />
   
       <ion-input label="Contraseña" type="password"  label-placement="floating" fill="outline" placeholder="******"></ion-input>
+      <br />
+
+      <ion-label>
+        <p>¿No tienes una cuenta de Supermonkey? <a [routerLink]="['/register']">Regístrate</a></p>
+      </ion-label>      
+
+      <div class="container-boton">
+        <ion-button class="boton" color="success" [routerLink]="['/frutas']">Iniciar sesión</ion-button>
+      </div>
+      <br />
+
     </ion-card>
   </div>
 </ion-content>
