@@ -12,7 +12,13 @@
       <ion-input label="Usuario" label-placement="floating" fill="outline" placeholder="Donjuan"></ion-input>
       <br />
   
-      <ion-input label="Contraseña" type="password"  label-placement="floating" fill="outline" placeholder="******"></ion-input>
+      <ion-input label="Contraseña" type="password"  label-placement="floating" fill="outline" placeholder="******">
+        <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+        <ion-button fill="clear" slot="end" aria-label="Show/hide">
+          <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+        </ion-button>
+      </ion-input>
+      
       <br />
 
       <ion-label>

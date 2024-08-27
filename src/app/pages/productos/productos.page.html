@@ -13,39 +13,50 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <ion-button color="danger" slot="fixed"><ion-icon name="bag-handle-outline"></ion-icon></ion-button>
   <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <img class="container-imagen" alt="manzana verde" src="../assets/Productos/manzana-verde.png"/>
     <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Manzana Verde</ion-card-title>
+      <ion-card-subtitle>1 kg.</ion-card-subtitle>
     </ion-card-header>
   
     <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
+      Precio :    $2.390
     </ion-card-content>
-    
+    <div class="container-boton">
+      <ion-button color="success" (click)="presentAlert()">compra</ion-button>
+    </div>
+
   </ion-card>
   <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <img alt="Silhouette of mountains" src="../assets/Productos/manzana-roja.png"/>
     <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Manzana Roja</ion-card-title>
+      <ion-card-subtitle>1 kg.</ion-card-subtitle>
     </ion-card-header>
   
     <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
+      Precio :    $2.390
     </ion-card-content>
+    <div class="container-boton">
+      <ion-button color="success" (click)="presentAlert()">compra</ion-button>
+    </div>
   </ion-card>
   <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <img alt="Silhouette of mountains" src="../assets/Productos/arandano.png" />
     <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Arandano</ion-card-title>
+      <ion-card-subtitle>400 g.</ion-card-subtitle>
     </ion-card-header>
   
     <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
+      Precio :    $3.590
     </ion-card-content>
+    <div class="container-boton">
+      <ion-button color="success" (click)="presentAlert()">compra</ion-button>
+    </div>
   </ion-card>
     
 </ion-content>
