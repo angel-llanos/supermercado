@@ -5,22 +5,24 @@
         <ion-title>Menú</ion-title>
       </ion-toolbar>
     </ion-header>
+
     <ion-content>
       <ion-list>
-        <ion-item>
+        <ion-item detail="true" [routerLink]="['/perfil']">
           <ion-label>Mi perfil</ion-label>
         </ion-item>
-        <ion-item detail="true">
+        <ion-item detail="true" [routerLink]="['/productos']">
           <ion-label>Productos</ion-label>
         </ion-item>
-        <ion-item detail="true">
-          <ion-label>preguntas frecuentes</ion-label>
+        <ion-item detail="true" [routerLink]="['/faqs']">
+          <ion-label>Preguntas frecuentes</ion-label>
         </ion-item>
-        <ion-item detail="true">
+        <ion-item detail="true" [routerLink]="['/acerca-de']">
           <ion-label>Acerca de</ion-label>
         </ion-item>
       </ion-list>
     </ion-content>
+
   </ion-menu>
 
   <ion-menu side="End" menuId="second-menu" contentId="main-content">

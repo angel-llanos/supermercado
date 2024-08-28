@@ -1,0 +1,13 @@
+//scss avatar principal
+ion-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+//scss para el div del avatar, hace que se muestre enmedio de la página
+.avatar {
+    display: grid;
+    place-items: center;
+    margin-top: 10%;
+}
