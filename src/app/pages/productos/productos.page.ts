@@ -8,12 +8,12 @@ import { AlertController } from '@ionic/angular';
 })
 export class ProductosPage implements OnInit {
 
-  constructor(public alertController : AlertController) { }
+  constructor(public alertcontroller : AlertController) { }
 
   ngOnInit() {
   }
   async presentAlert() {
-    const alert = await this.alertController.create({
+    const alert = await this.alertcontroller.create({
       header: 'Se agrego un producto a tu carro.',
       message: 'Gracias por preferir a supermonkey',
       buttons: ['Aceptar'],

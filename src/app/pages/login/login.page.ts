@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { addIcons } from 'ionicons';
 import { eye, lockClosed } from 'ionicons/icons';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -10,10 +11,20 @@ import { eye, lockClosed } from 'ionicons/icons';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { 
+
+  constructor( public alertcontroller : AlertController) { 
     addIcons({ eye, lockClosed });}
 
   ngOnInit() {
+  }
+  async presentAlert() {
+    const alert = await this.alertcontroller.create({
+      header: 'Se a Logueado correctamente',
+      message: 'Bienvenido ',
+      buttons: ['Aceptar'],
+    });
+
+    await alert.present();
   }
   
 
