@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
-  },  {
+  },
+  {
     path: 'faqs',
     loadChildren: () => import('./pages/faqs/faqs.module').then( m => m.FaqsPageModule)
   },
