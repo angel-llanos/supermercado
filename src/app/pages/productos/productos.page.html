@@ -1,61 +1,80 @@
-<ion-header [translucent]="true">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>
-        Productos
-      </ion-title>
-    </ion-toolbar>
+<div class="color-verde">
+  <ion-header [translucent]="true">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+          Productos
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
   </ion-header>
-</ion-header>
+</div>
 
 <ion-content [fullscreen]="true">
 
-  <ion-button color="danger" slot="fixed"><ion-icon name="bag-handle-outline"></ion-icon></ion-button>
   <ion-card>
-    <img class="container-imagen" alt="manzana verde" src="../assets/Productos/manzana-verde.png"/>
+    <img class="container-imagen" alt="manzana verde" src="../assets/Productos/manzana-verde.png" />
     <ion-card-header>
       <ion-card-title>Manzana Verde</ion-card-title>
       <ion-card-subtitle>1 kg.</ion-card-subtitle>
     </ion-card-header>
-  
+
     <ion-card-content>
-      Precio :    $2.390
+      Precio : $2.390
     </ion-card-content>
     <div class="container-boton">
-      <ion-button color="success" (click)="presentAlert()">compra</ion-button>
+      <ion-button color="success" (click)="presentAlert()">Agregar</ion-button>
     </div>
-
   </ion-card>
+
   <ion-card>
-    <img alt="Silhouette of mountains" src="../assets/Productos/manzana-roja.png"/>
+    <img alt="Silhouette of mountains" src="../assets/Productos/manzana-roja.png" />
     <ion-card-header>
       <ion-card-title>Manzana Roja</ion-card-title>
       <ion-card-subtitle>1 kg.</ion-card-subtitle>
     </ion-card-header>
-  
+
     <ion-card-content>
-      Precio :    $2.390
+      Precio : $2.390
     </ion-card-content>
     <div class="container-boton">
-      <ion-button color="success" (click)="presentAlert()">compra</ion-button>
+      <ion-button color="success" (click)="presentAlert()">Agregar</ion-button>
     </div>
   </ion-card>
+
   <ion-card>
     <img alt="Silhouette of mountains" src="../assets/Productos/arandano.png" />
     <ion-card-header>
       <ion-card-title>Arandano</ion-card-title>
       <ion-card-subtitle>400 g.</ion-card-subtitle>
     </ion-card-header>
-  
+
     <ion-card-content>
-      Precio :    $3.590
+      Precio : $3.590
     </ion-card-content>
     <div class="container-boton">
-      <ion-button color="success" (click)="presentAlert()">compra</ion-button>
+      <ion-button color="success" (click)="presentAlert()">Agregar</ion-button>
     </div>
   </ion-card>
-    
+
 </ion-content>
+
+<ion-footer [translucent]="true">
+  <ion-tab-bar color="success" slot="bottom">
+    <ion-tab-button tab="home" [routerLink]="['/productos']">
+      <ion-icon name="bag-check-outline"></ion-icon>
+      Productos
+    </ion-tab-button>
+    <ion-tab-button tab="library" [routerLink]="['/#']">
+      <ion-icon name="cart-outline"></ion-icon>
+      Carrito
+    </ion-tab-button>
+    <ion-tab-button tab="home" [routerLink]="['/perfil']">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      Perfil
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

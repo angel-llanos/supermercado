@@ -1,4 +1,6 @@
 <ion-app>
+
+  <!-- menú lateral -->
   <ion-menu side="start" menuId="first" contentId="main-content">
     <ion-header>
       <ion-toolbar>
@@ -8,11 +10,6 @@
 
     <ion-content>
       <ion-list>
-        <ion-menu-toggle>
-          <ion-item detail="true" [routerLink]="['/perfil']">
-            <ion-label slot="start">Mi perfil</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item detail="true" [routerLink]="['/productos']">
             <ion-label>Productos</ion-label>
@@ -29,25 +26,11 @@
           </ion-item>
         </ion-menu-toggle>
       </ion-list>
+
     </ion-content>
 
   </ion-menu>
 
-  <ion-menu side="end" menuId="second" contentId="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Carro de compras</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>
-          <ion-label>no hay compras</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
   <ion-router-outlet id="main-content"></ion-router-outlet>
+
 </ion-app>
-
-

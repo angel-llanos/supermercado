@@ -34,7 +34,11 @@ const routes: Routes = [
   {
     path: 'acerca-de',
     loadChildren: () => import('./pages/acerca-de/acerca-de.module').then( m => m.AcercaDePageModule)
+  },  {
+    path: 'carrito',
+    loadChildren: () => import('./pages/carrito/carrito.module').then( m => m.CarritoPageModule)
   },
+
 
 
 ];
