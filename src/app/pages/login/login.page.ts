@@ -36,8 +36,8 @@ export class LoginPage implements OnInit {
   }
   async presentAlert() {
     const alert = await this.alertcontroller.create({
-      header: 'Se a Logueado correctamente',
-      message: 'Bienvenido ',
+      header: 'Bienvenido, Usuario!',
+      message: 'Ha iniciado sesión correctamente. Disfrute de Supermonkey!',
       buttons: ['Aceptar'],
     });
 

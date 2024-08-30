@@ -11,3 +11,32 @@ ion-avatar {
     place-items: center;
     margin-top: 10%;
 }
+
+.datos-usuario {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.recientes {
+    margin-top: 50px;
+}
+
+.boton-perfil {
+    margin-top: 20px;
+}
+
+.container-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+//scss imágenes de cards
+ion-card img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}

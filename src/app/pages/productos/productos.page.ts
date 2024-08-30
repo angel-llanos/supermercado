@@ -19,8 +19,8 @@ export class ProductosPage implements OnInit {
   }
   async presentAlert() {
     const alert = await this.alertcontroller.create({
-      header: 'Se agrego un producto a tu carro.',
-      message: 'Gracias por preferir a supermonkey',
+      header: 'Producto agregado correctamente',
+      message: 'Puedes ver este producto en el carrito.',
       buttons: ['Aceptar'],
     });
 
