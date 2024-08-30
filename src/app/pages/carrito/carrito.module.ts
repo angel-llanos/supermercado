@@ -8,12 +8,15 @@ import { CarritoPageRoutingModule } from './carrito-routing.module';
 
 import { CarritoPage } from './carrito.page';
 
+import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CarritoPageRoutingModule
+    CarritoPageRoutingModule,
+    MatIconModule
   ],
   declarations: [CarritoPage]
 })

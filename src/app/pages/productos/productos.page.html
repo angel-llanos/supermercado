@@ -1,7 +1,7 @@
 <div class="color-verde">
   <ion-header [translucent]="true">
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar color="success">
         <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
@@ -54,6 +54,36 @@
 
     <ion-card-content>
       Precio : $3.590
+    </ion-card-content>
+    <div class="container-boton">
+      <ion-button color="success" (click)="presentAlert()">Agregar</ion-button>
+    </div>
+  </ion-card>
+
+  <ion-card>
+    <img alt="Silhouette of mountains" src="../assets/Productos/mango.png" />
+    <ion-card-header>
+      <ion-card-title>Mango</ion-card-title>
+      <ion-card-subtitle>1 kg.</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Precio : $4.500
+    </ion-card-content>
+    <div class="container-boton">
+      <ion-button color="success" (click)="presentAlert()">Agregar</ion-button>
+    </div>
+  </ion-card>
+
+  <ion-card>
+    <img alt="Silhouette of mountains" src="../assets/Productos/platano.png" />
+    <ion-card-header>
+      <ion-card-title>Plátano</ion-card-title>
+      <ion-card-subtitle>1 kg.</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Precio : $1.590
     </ion-card-content>
     <div class="container-boton">
       <ion-button color="success" (click)="presentAlert()">Agregar</ion-button>

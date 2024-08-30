@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(public alertcontroller : AlertController) {}
+
+  async presentAlert() {
+    const alert = await this.alertcontroller.create({
+      header: 'Hasta pronto, Usuario!',
+      message: 'Su sesión se ha cerrado exitosamente.',
+      buttons: ['Aceptar'],
+    });
+  
+    await alert.present();
+  }
+
 }
