@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 
-import { AlertController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 
 
 @Component({
@@ -19,21 +19,9 @@ export class RegisterPage implements OnInit {
   contrasena2: string ="";
 
 
-  constructor(public alertcontroller : AlertController, private router : Router ) { }
+  constructor(public alertcontroller : AlertController, private router : Router, private toastController: ToastController ) { }
 
   ngOnInit() {
-  }
-  MandarDatos(){
-    let navigationextras: NavigationExtras = {
-      state:{
-        con: this.contrasena,
-        ape: this.apellido,
-        user: this.usuario,
-        ema: this.email,
-        nom: this.nombre
-      }
-    }
-    this.router.navigate(['/login'], navigationextras);
   }
   async presentAlert() {
     const alert = await this.alertcontroller.create({
@@ -44,5 +32,47 @@ export class RegisterPage implements OnInit {
 
     await alert.present();
   }
+  validarUsuario(){
+    if (this.nombre===""){
 
+      this.presentToast('middle','el campo nombre esta vacio');
+      return;
+    }if (this.apellido===""){
+
+      this.presentToast('middle','el campo apellido esta vacio');
+      return;
+    }if (this.usuario===""){
+
+      this.presentToast('middle','el campo usuario esta vacio');
+      return;
+    }if (this.email===""){
+
+      this.presentToast('middle','el campo email esta vacio');
+      return;
+    }if (this.contrasena===""){
+
+      this.presentToast('middle','el campo contraseña esta vacio');
+      return;
+    }if (this.contrasena2===""){
+
+      this.presentToast('middle','el campo confirmar contraseña esta vacio');
+      return;
+    }if (this.contrasena!=this.contrasena2){
+
+      this.presentToast('middle','las contraseñas no coinciden');
+      return;
+    }else{
+      this.presentAlert;
+      this.router.navigate(['/login']);
+    }
+  }
+  async presentToast(position: 'middle', texto:string) {
+    const toast = await this.toastController.create({
+      message: texto,
+      duration: 1500,
+      position: position,
+    });
+
+    await toast.present();
+  }
 }

@@ -9,14 +9,12 @@
       <br />
       <br />
 
-      <ion-input label="Usuario" label-placement="floating" fill="outline" placeholder="Donjuan"></ion-input>
+      <ion-input label="Usuario" label-placement="floating" fill="outline" placeholder="Donjuan" [(ngModel)]="usuario"></ion-input>
       <br />
   
-      <ion-input label="Contraseña" type="password"  label-placement="floating" fill="outline" placeholder="******">
+      <ion-input label="Contraseña" type="password"  label-placement="floating" fill="outline" placeholder="******"[(ngModel)]="contrasena">
         <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
-        <ion-button fill="clear" slot="end" aria-label="Show/hide">
-          <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
-        </ion-button>
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
       
       <br />
@@ -26,7 +24,7 @@
       </ion-label>      
 
       <div class="container-boton">
-        <ion-button class="boton" color="success" (click)="presentAlert()" [routerLink]="['/productos']">Iniciar sesión</ion-button>
+        <ion-button class="boton" color="success" (click)="validarusuario()">Iniciar sesión</ion-button>
       </div>
       <br />
 

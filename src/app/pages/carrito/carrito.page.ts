@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-carrito',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarritoPage implements OnInit {
 
-  constructor() { }
+  constructor(public alertcontroller : AlertController) { }
 
   ngOnInit() {
+  }
+  async presentAlert() {
+    const alert = await this.alertcontroller.create({
+      header: 'Su compra a sido exitosa',
+      message: 'Gracias por comprar en supermonkey',
+      buttons: ['Aceptar'],
+    });
+
+    await alert.present();
   }
 
 }

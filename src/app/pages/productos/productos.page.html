@@ -14,6 +14,19 @@
 </div>
 
 <ion-content [fullscreen]="true">
+  <div padding *ngIf="usuario=='admin'">
+    <ion-row>
+      <ion-col col-4>
+        <ion-button color="success" (click)="agregar()">Agregar</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button color="warning" (click)="presentAlert3()">editar</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button color="danger" (click)="presentAlert2()">eliminar</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
 
   <ion-card>
     <img class="container-imagen" alt="manzana verde" src="../assets/Productos/manzana-verde.png" />
