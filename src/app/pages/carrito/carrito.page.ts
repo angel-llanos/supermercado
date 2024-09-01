@@ -14,8 +14,8 @@ export class CarritoPage implements OnInit {
   }
   async presentAlert() {
     const alert = await this.alertcontroller.create({
-      header: 'Su compra a sido exitosa',
-      message: 'Gracias por comprar en supermonkey',
+      header: 'Su compra ha sido exitosa.',
+      message: 'Gracias por comprar en Supermonkey!',
       buttons: ['Aceptar'],
     });
 

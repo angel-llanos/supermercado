@@ -15,8 +15,8 @@ export class LoginPage implements OnInit {
   usuarioAdmin: string="admin";
   contrasenaAdmin: string="admin";
   
-  usuarioCli: string ="sebastian";
-  contrasenaCli: string ="04032003Se";
+  usuarioCli: string ="usuario";
+  contrasenaCli: string ="123";
 
   usuario:string ="";
   contrasena:string="";
@@ -47,7 +47,7 @@ export class LoginPage implements OnInit {
           user: this.usuarioAdmin
         }
       }
-      this.presentAlert('bienvenido','Ha iniciado sesión como admin. Disfrute de Supermonkey!');
+      this.presentAlert('Bienvenido','Ha iniciado sesión como admin. Disfrute de Supermonkey!');
       this.router.navigate(['/productos'],navigationextras)
     }if(this.usuario===this.usuarioCli && this.contrasena===this.contrasenaCli){
       let navigationextras: NavigationExtras = {
@@ -56,15 +56,15 @@ export class LoginPage implements OnInit {
           user: this.usuarioCli
         }
       }
-      this.presentAlert('bienvenido {{usuario}}','Ha iniciado sesión correctamente. Disfrute de Supermonkey!');
+      this.presentAlert('Bienvenido usuario!','Ha iniciado sesión correctamente. Disfrute de Supermonkey!');
       this.router.navigate(['/productos'], navigationextras)
     }if (this.usuario==="" || this.contrasena===""){
 
-      this.presentAlert('los campos estan vacios','porfavor ingrece su usuario o registrese');
+      this.presentAlert('Los campos están vacíos','Por favor, ingrese su nombre de usuario o regístrese');
       return;
     }if (this.contrasena!==this.contrasenaAdmin && this.usuario!==this.usuarioAdmin && this.contrasena!==this.contrasenaCli && this.usuario!==this.usuarioCli){
       
-      this.presentAlert('usuario no existe','porfavor ingrece su usuario o registrese');
+      this.presentAlert('El usuario no existe','Por favor, ingrese su nombre de usuario o regístrese');
       return;
     }
   }

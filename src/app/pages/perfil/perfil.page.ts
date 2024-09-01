@@ -14,7 +14,7 @@ export class PerfilPage implements OnInit {
   }
   async presentAlert() {
     const alert = await this.alertcontroller.create({
-      header: 'modificar perfil',
+      header: 'Modificar perfil',
       inputs: [
         {
           name: 'nombre',
@@ -29,7 +29,7 @@ export class PerfilPage implements OnInit {
         {
           name: 'contrasena',
           type: 'password',
-          placeholder: 'contrasena'
+          placeholder: 'Contraseña'
         },
       ],
       buttons: [{
@@ -37,7 +37,7 @@ export class PerfilPage implements OnInit {
         role: 'cancel',
       },
       {
-        text: 'aceptar',
+        text: 'Aceptar',
       }
     ],
     });

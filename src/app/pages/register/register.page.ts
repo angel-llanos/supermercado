@@ -35,31 +35,31 @@ export class RegisterPage implements OnInit {
   validarUsuario(){
     if (this.nombre===""){
 
-      this.presentToast('middle','el campo nombre esta vacio');
+      this.presentToast('middle','El campo "Nombre" está vacío.');
       return;
     }if (this.apellido===""){
 
-      this.presentToast('middle','el campo apellido esta vacio');
+      this.presentToast('middle','El campo "Apellido" está vacío.');
       return;
     }if (this.usuario===""){
 
-      this.presentToast('middle','el campo usuario esta vacio');
+      this.presentToast('middle','El campo "Nombre de usuario" está vacío.');
       return;
     }if (this.email===""){
 
-      this.presentToast('middle','el campo email esta vacio');
+      this.presentToast('middle','El campo "Correo electrónico" está vacío.');
       return;
     }if (this.contrasena===""){
 
-      this.presentToast('middle','el campo contraseña esta vacio');
+      this.presentToast('middle','El campo "Contraseña" está vacío.');
       return;
     }if (this.contrasena2===""){
 
-      this.presentToast('middle','el campo confirmar contraseña esta vacio');
+      this.presentToast('middle','El campo "Confirmar contraseña" está vacío.');
       return;
     }if (this.contrasena!=this.contrasena2){
 
-      this.presentToast('middle','las contraseñas no coinciden');
+      this.presentToast('middle','Las contraseñas no coinciden.');
       return;
     }else{
       this.presentAlert;
