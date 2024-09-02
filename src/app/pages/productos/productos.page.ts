@@ -18,11 +18,10 @@ export class ProductosPage implements OnInit {
   constructor(public alertcontroller : AlertController,private router: Router,private activedroute: ActivatedRoute) { 
     addIcons({ library, playCircle, radio, search });
 
-    //verificar la recepcion de los elementos
     this.activedroute.queryParams.subscribe(param =>{
-      //validamos si recibe la informacion
+
       if(this.router.getCurrentNavigation()?.extras.state){
-        //capturar la informacion
+
         this.contrasena = this.router.getCurrentNavigation()?.extras?.state?.['con'];
         this.usuario = this.router.getCurrentNavigation()?.extras?.state?.['user'];
         
@@ -44,7 +43,7 @@ export class ProductosPage implements OnInit {
 
   async presentAlert2() {
     const alert = await this.alertcontroller.create({
-      header: 'eliminar producto',
+      header: 'Eliminar producto',
       inputs: [
         {
           name: 'nombre producto',
@@ -66,7 +65,7 @@ export class ProductosPage implements OnInit {
 
   async presentAlert3() {
     const alert = await this.alertcontroller.create({
-      header: 'Editar Producto',
+      header: 'Editar producto',
       inputs: [
         {
           name: 'nombre producto',
@@ -78,9 +77,9 @@ export class ProductosPage implements OnInit {
         role: 'cancel',
       },
       {
-        text: 'aceptar',
+        text: 'Aceptar',
         handler: () => {
-          this.presentAlert4('Editar producto'); // Llama a la segunda alerta desde aquí
+          this.presentAlert4('Editar producto');
         }
       }
     ],
@@ -90,7 +89,7 @@ export class ProductosPage implements OnInit {
   }
   agregar(){
 
-      this.presentAlert4('Agregar Producto')
+      this.presentAlert4('Agregar producto')
   }
   async presentAlert4(titulo:string) {
     const alert = await this.alertcontroller.create({
@@ -104,12 +103,12 @@ export class ProductosPage implements OnInit {
         {
           name: 'cantidad',
           type: 'number',
-          placeholder: 'cantidad'
+          placeholder: 'Cantidad'
         },
         {
           name: 'Precio',
           type: 'number',
-          placeholder: 'precio'
+          placeholder: 'Precio'
         },
       ],
       buttons: [{
@@ -117,7 +116,7 @@ export class ProductosPage implements OnInit {
         role: 'cancel',
       },
       {
-        text: 'aceptar',
+        text: 'Aceptar',
       }
     ],
     });
