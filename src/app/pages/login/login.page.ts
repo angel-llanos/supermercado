@@ -39,7 +39,7 @@ export class LoginPage implements OnInit {
     await alert.present();
   }
 
-  validarusuario(){
+  validarUsuario(){
     if (this.usuario===this.usuarioAdmin && this.contrasena===this.contrasenaAdmin){
       let navigationextras: NavigationExtras = {
         state:{
@@ -68,6 +68,7 @@ export class LoginPage implements OnInit {
       return;
     }
   }
+
   async presentToast(position: 'middle', texto:string) {
     const toast = await this.toastController.create({
       message: texto,
@@ -77,6 +78,28 @@ export class LoginPage implements OnInit {
 
     await toast.present();
   }
-  
 
+  async restablecerContrasena() {
+    const alert = await this.alertcontroller.create({
+      header: 'Restablecer contraseña',
+      message: 'Escribe tu correo electrónico:',
+      inputs: [
+        {
+          name: 'email',
+          type: 'email',
+          placeholder: 'Correo electrónico'
+        },
+      ],
+      buttons: [{
+        text: 'Cancelar',
+        role: 'cancel',
+      },
+      {
+        text: 'Aceptar',
+      }
+    ],
+    });
+
+    await alert.present();
+  }
 }

@@ -25,8 +25,8 @@ export class RegisterPage implements OnInit {
   }
   async presentAlert() {
     const alert = await this.alertcontroller.create({
-      header: 'Se a Registrado correctamente',
-      message: 'Loguear para entrar',
+      header: 'Se ha registrado correctamente',
+      message: 'Iniciar sesión para entrar',
       buttons: ['Aceptar'],
     });
 
