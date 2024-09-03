@@ -69,7 +69,7 @@ export class LoginPage implements OnInit {
     }
   }
 
-  async presentToast(position: 'middle', texto:string) {
+  async presentToast(position: 'bottom', texto:string) {
     const toast = await this.toastController.create({
       message: texto,
       duration: 1500,
@@ -96,6 +96,9 @@ export class LoginPage implements OnInit {
       },
       {
         text: 'Aceptar',
+        handler: ()=> {
+          this.presentToast('bottom', 'Se ha enviado un correo de recuperación.');
+        }
       }
     ],
     });

@@ -53,7 +53,7 @@ export class RegisterPage implements OnInit {
       return;
     }if (this.contrasena.length<8 || this.contrasena.length>16) {
 
-      this.presentToast('middle','Las contraseñas es menor a 8 o mayor a 16 caracteres.');
+      this.presentToast('middle','La contraseña es menor a 8 o mayor a 16 caracteres.');
       return;
     }else{
       this.presentAlert;
