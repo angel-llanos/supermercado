@@ -13,10 +13,10 @@ import {NavigationExtras, Router } from '@angular/router';
 export class LoginPage implements OnInit {
 
   usuarioAdmin: string="admin";
-  contrasenaAdmin: string="admin";
+  contrasenaAdmin: string="admin123";
   
   usuarioCli: string ="usuario";
-  contrasenaCli: string ="123";
+  contrasenaCli: string ="123456789";
 
   usuario:string ="";
   contrasena:string="";

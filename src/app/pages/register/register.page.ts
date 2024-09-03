@@ -11,8 +11,6 @@ import { AlertController, ToastController } from '@ionic/angular';
 })
 export class RegisterPage implements OnInit {
 
-  nombre: string = "";
-  apellido: string = "";
   usuario: string = "";
   email: string ="";
   contrasena: string = "";
@@ -33,15 +31,7 @@ export class RegisterPage implements OnInit {
     await alert.present();
   }
   validarUsuario(){
-    if (this.nombre===""){
-
-      this.presentToast('middle','El campo "Nombre" está vacío.');
-      return;
-    }if (this.apellido===""){
-
-      this.presentToast('middle','El campo "Apellido" está vacío.');
-      return;
-    }if (this.usuario===""){
+    if (this.usuario===""){
 
       this.presentToast('middle','El campo "Nombre de usuario" está vacío.');
       return;
@@ -57,9 +47,13 @@ export class RegisterPage implements OnInit {
 
       this.presentToast('middle','El campo "Confirmar contraseña" está vacío.');
       return;
-    }if (this.contrasena!=this.contrasena2){
+    }if (this.contrasena!==this.contrasena2){
 
       this.presentToast('middle','Las contraseñas no coinciden.');
+      return;
+    }if (this.contrasena.length<8 || this.contrasena.length>16) {
+
+      this.presentToast('middle','Las contraseñas es menor a 8 o mayor a 16 caracteres.');
       return;
     }else{
       this.presentAlert;
