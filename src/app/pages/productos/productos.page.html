@@ -7,6 +7,9 @@
         </ion-buttons>
         <ion-title>
           Productos
+          <div *ngIf="usuario=='admin'">
+            <ion-button color="success" slot="end" [routerLink]="['/agregar-producto']">Agregar</ion-button>
+          </div>
         </ion-title>
       </ion-toolbar>
     </ion-header>
@@ -14,19 +17,6 @@
 </div>
 
 <ion-content [fullscreen]="true">
-  <div padding *ngIf="usuario=='admin'">
-    <ion-row>
-      <ion-col col-4>
-        <ion-button color="success" (click)="agregar()">Agregar</ion-button>
-      </ion-col>
-      <ion-col col-4>
-        <ion-button color="warning" (click)="presentAlert3()">Editar</ion-button>
-      </ion-col>
-      <ion-col col-4>
-        <ion-button color="danger" (click)="presentAlert2()">Eliminar</ion-button>
-      </ion-col>
-    </ion-row>
-  </div>
 
   <ion-card>
     <img class="container-imagen" alt="manzana verde" src="../assets/Productos/manzana-verde.png" />
@@ -39,7 +29,13 @@
       Precio : $2.390
     </ion-card-content>
     <div class="container-boton">
-      <ion-button color="success" (click)="presentAlert()">Agregar al carrito</ion-button>
+      <div *ngIf="usuario=='usuario'">
+        <ion-button color="success" (click)="presentAlert()">Agregar al carrito</ion-button>
+      </div>
+      <div *ngIf="usuario=='admin'">
+        <ion-button color="warning" [routerLink]="['/editar-producto']">Editar</ion-button>
+        <ion-button color="danger" (click)="presentAlert2()">Eliminar</ion-button>
+      </div>
     </div>
   </ion-card>
 
@@ -55,6 +51,8 @@
     </ion-card-content>
     <div class="container-boton">
       <ion-button color="success" (click)="presentAlert()">Agregar al carrito</ion-button>
+      <ion-button color="warning" >Editar</ion-button>
+      <ion-button color="danger">Eliminar</ion-button>
     </div>
   </ion-card>
 
@@ -70,6 +68,8 @@
     </ion-card-content>
     <div class="container-boton">
       <ion-button color="success" (click)="presentAlert()">Agregar al carrito</ion-button>
+      <ion-button color="warning" >Editar</ion-button>
+      <ion-button color="danger">Eliminar</ion-button>
     </div>
   </ion-card>
 
@@ -85,6 +85,8 @@
     </ion-card-content>
     <div class="container-boton">
       <ion-button color="success" (click)="presentAlert()">Agregar al carrito</ion-button>
+      <ion-button color="warning" >Editar</ion-button>
+      <ion-button color="danger">Eliminar</ion-button>
     </div>
   </ion-card>
 
@@ -100,6 +102,8 @@
     </ion-card-content>
     <div class="container-boton">
       <ion-button color="success" (click)="presentAlert()">Agregar al carrito</ion-button>
+      <ion-button color="warning" >Editar</ion-button>
+      <ion-button color="danger">Eliminar</ion-button>
     </div>
   </ion-card>
 

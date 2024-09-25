@@ -44,18 +44,16 @@ export class ProductosPage implements OnInit {
   async presentAlert2() {
     const alert = await this.alertcontroller.create({
       header: 'Eliminar producto',
-      inputs: [
-        {
-          name: 'nombre producto',
-          type: 'text',
-          placeholder: 'Nombre'
-        }],
+      message: '¿Desea eliminar este producto?',
       buttons: [{
         text: 'Cancelar',
         role: 'cancel',
       },
       {
         text: 'aceptar',
+        handler: () => {
+          this.presentAlert3(); // Llama a la segunda alerta desde aquí
+        }
       }
     ],
     });
@@ -65,62 +63,14 @@ export class ProductosPage implements OnInit {
 
   async presentAlert3() {
     const alert = await this.alertcontroller.create({
-      header: 'Editar producto',
-      inputs: [
-        {
-          name: 'nombre producto',
-          type: 'text',
-          placeholder: 'Nombre'
-        }],
+      header: 'Se a eliminado el Producto',
       buttons: [{
-        text: 'Cancelar',
-        role: 'cancel',
-      },
-      {
-        text: 'Aceptar',
-        handler: () => {
-          this.presentAlert4('Editar producto');
-        }
+        text: 'OK',
       }
     ],
     });
     await alert.present();
 
   }
-  agregar(){
-
-      this.presentAlert4('Agregar producto')
-  }
-  async presentAlert4(titulo:string) {
-    const alert = await this.alertcontroller.create({
-      header: titulo,
-      inputs: [
-        {
-          name: 'nombre producto',
-          type: 'text',
-          placeholder: 'Nombre'
-        },
-        {
-          name: 'cantidad',
-          type: 'number',
-          placeholder: 'Cantidad'
-        },
-        {
-          name: 'Precio',
-          type: 'number',
-          placeholder: 'Precio'
-        },
-      ],
-      buttons: [{
-        text: 'Cancelar',
-        role: 'cancel',
-      },
-      {
-        text: 'Aceptar',
-      }
-    ],
-    });
-    await alert.present();
-
-  }
+ 
 }
